@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arm control</title>
+
+	<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            display: grid;
+            place-items: center;
+            background-color: #d3a4ae;
+        }
+        .btn{
+        	outline: none;
+        	display: block;
+        	border: 0;
+        	font-size: 16px;
+        	line-height: 1;
+        	padding: 16px 30px;
+        	border-radius: 30px;
+        	background: #FFFFFF;
+        }
+
+        }
+    </style>
+</head>
+<body>
+<br><br><br><br><br><br>
+
+		<form action="task_1.php" method="post"> 
+	<div class="slide">
+		<div>
+			<label>Motor 1</label>
+			<input type="range" min="0" max="100" value="10" class="slide" id="slider1" name="slider1">
+			<label id="result_box1">100</label>
+		</div><br>
+
+		<div>
+			<label>Motor 2</label>
+			<input type="range" min="0" max="100" value="22" class="slide" id="slider2" name="slider2">
+			<label id="result_box2">100</label>
+		</div><br>
+
+		<div>
+			<label>Motor 3</label>
+			<input type="range" min="0" max="100" value="50" class="slide" id="slider3" name="slider3">
+			<label id="result_box3">100</label>
+		</div><br>
+
+		<div>
+			<label>Motor 4</label>
+			<input type="range" min="0" max="100" value="32" class="slide" id="slider4" name="slider4">
+			<label id="result_box4">100</label>
+		</div><br>
+
+		<div>
+			<label>Motor 5</label>
+			<input type="range" min="0" max="100" value="90" class="slide" id="slider5" name="slider5">
+			<label id="result_box5">100</label>
+		</div><br>
+
+		<div>
+			<label>Motor 6</label>
+			<input type="range" min="0" max="100" value="61" class="slide" id="slider6" name="slider6">
+			<label id="result_box6">100</label>
+		</div><br><br><br>
+	</div> 
+			<button class="btn" type="button" onclick="alert('saved')" name="save">save</button>
+            <br>
+            <button class="btn" type="button">running</button>
+            <input type="submit" name="submit">
+            <br>
+      </form>
+	<script>
+		var slider1 = document.getElementById("slider1");
+		var slider2 = document.getElementById("slider2");
+		var slider3 = document.getElementById("slider3");
+		var slider4 = document.getElementById("slider4");
+		var slider5 = document.getElementById("slider5");
+		var slider6 = document.getElementById("slider6");
+
+		var label1 = document.getElementById("result_box1");
+		var label2 = document.getElementById("result_box2");
+		var label3 = document.getElementById("result_box3");
+		var label4 = document.getElementById("result_box4");
+		var label5 = document.getElementById("result_box5");
+		var label6 = document.getElementById("result_box6");
+
+		label1.textContent = slider1.value;
+		slider1.oninput = function(){
+			label1.textContent = this.value;
+		}
+		label2.textContent = slider2.value;
+		slider2.oninput = function(){
+			label2.textContent = this.value;
+		}
+		label3.textContent = slider3.value;
+		slider3.oninput = function(){
+			label3.textContent = this.value;
+		}
+		label4.textContent = slider4.value;
+		slider4.oninput = function(){
+			label4.textContent = this.value;
+		}
+		label5.textContent = slider5.value;
+		slider5.oninput = function(){
+			label5.textContent = this.value;
+		}
+		label6.textContent = slider6.value;
+		slider6.oninput = function(){
+			label6.textContent = this.value;
+		}
+
+	</script>
+
+
+
+
+</body>
+</html>
